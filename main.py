@@ -7,7 +7,7 @@ from credentials import *
 
 def main(accont, scopes):
         
-    DATABASE = conect_DB(SERVICE_ACCONT_FILE = accont, SCOPES = scopes )
+    DATABASE = conect_DB(service = accont, scopes = scopes )
     data = DATABASE.get_all_records()
     apresenta(data)
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
