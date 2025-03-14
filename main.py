@@ -5,6 +5,7 @@ from credentials import teste
 
 
 
+
 def main(accont, scopes):
         
     DATABASE = conect_DB(SERVICE_ACCONT_FILE = accont, SCOPES = scopes )
@@ -17,5 +18,4 @@ def main(accont, scopes):
 
 
 # main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
-
 teste()
