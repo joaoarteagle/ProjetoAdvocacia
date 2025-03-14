@@ -1,11 +1,7 @@
 from connectionSheets import conect_DB
 from apresenta import apresenta
 from orderByDate import orderByDate
-
-SERVICE_ACCONT_FILE = "./resources/projetoadvocacia-444317-3e540d06f0be.json"
-
-SCOPES = ["https://www.googleapis.com/auth/spreadsheets",
-          "https://www.googleapis.com/auth/drive"]
+from credentials import teste
 
 
 
@@ -20,4 +16,6 @@ def main(accont, scopes):
 
 
 
-main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
+# main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
+
+teste()
