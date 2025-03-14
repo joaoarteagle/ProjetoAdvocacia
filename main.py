@@ -7,7 +7,7 @@ from credentials import *
 
 def main(accont, scopes):
         
-    print( f'{SERVICE_ACCONT_FILE}=================={SCOPES}')
+    print( f'{type(SERVICE_ACCONT_FILE)}=================={type(SCOPES)}')
     DATABASE = conect_DB(service = accont, scopes = scopes )
     data = DATABASE.get_all_records()
     apresenta(data)
