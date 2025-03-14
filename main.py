@@ -7,13 +7,11 @@ from credentials import *
 
 def main(accont, scopes):
         
+    print(SERVICE_ACCONT_FILE + '============' + SCOPES)
     DATABASE = conect_DB(service = accont, scopes = scopes )
     data = DATABASE.get_all_records()
     apresenta(data)
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
-
-
-print(SERVICE_ACCONT_FILE + '============' + SCOPES)
 
 
 main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
