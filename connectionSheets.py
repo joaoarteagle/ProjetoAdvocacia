@@ -7,7 +7,7 @@ from apresenta import apresenta
 
 def conect_DB(service, scopes):
 
-   creds = Credentials.from_service_account_file(filename = service, kwargs = scopes)
+   creds = Credentials.from_service_account_file(service, scopes)
    print("credenciais")
 
    client = gspread.authorize(creds)

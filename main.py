@@ -13,7 +13,7 @@ def main(accont, scopes):
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
 
 
-
+print(SERVICE_ACCONT_FILE + '============' + SCOPES)
 
 
 main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
