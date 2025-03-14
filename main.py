@@ -1,8 +1,7 @@
 from connectionSheets import conect_DB
 from apresenta import apresenta
 from orderByDate import orderByDate
-from credentials import teste
-
+from credentials import *
 
 
 
@@ -17,5 +16,4 @@ def main(accont, scopes):
 
 
 
-# main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
-teste()
+main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
