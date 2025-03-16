@@ -1,13 +1,12 @@
-from connectionSheets import conect_DB
-from apresenta import apresenta
-from orderByDate import orderByDate
-from credentials import *
+from functions.data_function.connectionSheets import conect_DB
+from functions.data_function.apresenta import apresenta
+from functions.data_function.orderByDate import orderByDate
+from functions.data_function.credentials import *
 
 
 
 def main(accont, scopes):
         
-    print( f'{type(SERVICE_ACCONT_FILE)}=================={type(SCOPES)}')
     DATABASE = conect_DB(service = accont, scopes = scopes )
     data = DATABASE.get_all_records()
     apresenta(data)

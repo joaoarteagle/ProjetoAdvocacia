@@ -1,7 +1,7 @@
 from flask import Flask, request
 import threading
-from main import main
-from pyngrok import ngrok, conf, installer
+from src.main import main
+
 
 
 app = Flask(__name__)
