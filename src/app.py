@@ -6,7 +6,7 @@ from src.main import main
 
 app = Flask(__name__)
 
-@app.route('/webhook', methods=['POST', 'PUT', 'GET'])
+@app.route('/', methods=['POST', 'PUT', 'GET'])
 def webhook():
     data = request.json
     print("Webhook receive:", data)
