@@ -7,17 +7,21 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/webhook', methods=['POST', 'GET'])
+
+
+@app.route('/', methods=['POST', 'GET'])
 def webhook():
-    data = request.json
-    print("Webhook receive:", data)
 
-    threading.Thread(target = main, args=(
-        "avisos",
-        "page1",
-        3
-    )).start()
+    try:
+        data = request.json
+        print("Webhook receive:", data)
 
+        threading.Thread(target = main, args=(
+            "avisos",
+            "page1",
+            3
+        )).start()
+    except: NameError
     return {"status": "OK"}, 200
 
 
