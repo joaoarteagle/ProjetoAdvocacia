@@ -4,7 +4,6 @@ from functions.data_function.orderByDate import orderByDate
 from credentials import *
 import requests
 
-
 def main(accont, scopes):
         
     DATABASE = conect_DB(service = accont, scopes = scopes )
