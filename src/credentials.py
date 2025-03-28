@@ -11,3 +11,4 @@ def json_to_string(file_path):
         print(json.dumps(json.load(file)))
 
 json_to_string('./resources/keys.json')
+
