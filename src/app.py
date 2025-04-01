@@ -3,7 +3,7 @@ from functions.data_function.apresenta import apresenta
 from functions.data_function.orderByDate import orderByDate
 from credentials import *
 from flask import Flask
-from vercel import Vercel
+
 
 app = Flask(__name__)
 
@@ -39,4 +39,3 @@ if __name__ == '__main__':
     app.run()
 
 
-handle = Vercel(app)
