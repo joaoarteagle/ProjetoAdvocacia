@@ -3,6 +3,7 @@ from functions.data_function.apresenta import apresenta
 from functions.data_function.orderByDate import orderByDate
 from credentials import *
 from fastapi import FastAPI
+from mangum import Mangum
 
 def main(accont, scopes):
         
@@ -13,8 +14,10 @@ def main(accont, scopes):
 
 app = FastAPI()
 
+
+
 @app.get("/")
-def handler(event, context):
+def home(event, context):
     
     try:
         main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
@@ -27,3 +30,6 @@ def handler(event, context):
             "statusCode": 500,
             "body": json.dumps({"error": str(e)})
         }
+    
+
+handler = Mangum(app)
