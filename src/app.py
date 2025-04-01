@@ -3,6 +3,9 @@ from functions.data_function.apresenta import apresenta
 from functions.data_function.orderByDate import orderByDate
 from credentials import *
 from flask import Flask
+from vercel import Vercel
+
+app = Flask(__name__)
 
 
 def main(accont, scopes):
@@ -12,11 +15,10 @@ def main(accont, scopes):
     apresenta(data)
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
 
-app = Flask(__name__)
 
 
 
-@app.route("/")
+@app.route('/')
 def handle():
     
     try:
@@ -32,3 +34,9 @@ def handle():
         }
     
 
+
+if __name__ == '__main__':
+    app.run()
+
+
+handle = Vercel(app)
