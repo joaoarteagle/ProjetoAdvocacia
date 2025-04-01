@@ -12,10 +12,17 @@ def main(accont, scopes):
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
 
 
-main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
 
 def handler(event, context):
-    return {
-        "statusCode": 200,
-        "body": "Automação Python funcionando no Vercel!"
-    }
+    
+    try:
+        main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
+        return {
+            "statusCode": 200,
+            "body": json.dumps({"message": "Automação rodando"})
+        }
+    except Exception as e:
+        return{
+            "statusCode": 500,
+            "body": json.dumps({"error": str(e)})
+        }
