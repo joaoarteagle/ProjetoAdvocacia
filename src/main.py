@@ -13,3 +13,9 @@ def main(accont, scopes):
 
 
 main(accont = SERVICE_ACCONT_FILE, scopes = SCOPES)
+
+def handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Automação Python funcionando no Vercel!"
+    }
