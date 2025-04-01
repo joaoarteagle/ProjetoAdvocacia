@@ -2,7 +2,7 @@ from functions.data_function.connectionSheets import conect_DB
 from functions.data_function.apresenta import apresenta
 from functions.data_function.orderByDate import orderByDate
 from credentials import *
-import requests
+from fastapi import FastAPI
 
 def main(accont, scopes):
         
@@ -11,8 +11,9 @@ def main(accont, scopes):
     apresenta(data)
     orderByDate(3, valores=DATABASE.get_all_values(), database=DATABASE)
 
+app = FastAPI()
 
-
+@app.get("/")
 def handler(event, context):
     
     try:
